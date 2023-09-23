@@ -82,16 +82,16 @@ export default function HomePage() {
       getBalance();
     }
   };
-  const deposit5 = async () => {
+  const deposit3 = async () => {
     if (atm) {
-      let tx = await atm.deposit(5);
+      let tx = await atm.deposit(3);
       await tx.wait();
       getBalance();
     }
   };
-  const deposit10 = async () => {
+  const deposit5 = async () => {
     if (atm) {
-      let tx = await atm.deposit(10);
+      let tx = await atm.deposit(5);
       await tx.wait();
       getBalance();
     }
@@ -111,16 +111,16 @@ export default function HomePage() {
       getBalance();
     }
   };
-  const withdraw5 = async () => {
+  const withdraw3 = async () => {
     if (atm) {
-      let tx = await atm.withdraw(5);
+      let tx = await atm.withdraw(3);
       await tx.wait();
       getBalance();
     }
   };
-  const withdraw10 = async () => {
+  const withdraw5 = async () => {
     if (atm) {
-      let tx = await atm.withdraw(10);
+      let tx = await atm.withdraw(5);
       await tx.wait();
       getBalance();
     }
@@ -148,10 +148,10 @@ export default function HomePage() {
       }
     }
   };
-  const multiplyValue4 = async () => {
+  const multiplyValue5 = async () => {
     if (atm) {
       try {
-        const tx = await atm.multiplyBalance(4);
+        const tx = await atm.multiplyBalance(5);
         await tx.wait();
         getBalance();
       } catch (error) {
@@ -159,10 +159,10 @@ export default function HomePage() {
       }
     }
   };
-  const multiplyValue5 = async () => {
+  const multiplyValue10 = async () => {
     if (atm) {
       try {
-        const tx = await atm.multiplyBalance(5); 
+        const tx = await atm.multiplyBalance(10); 
         await tx.wait();
         getBalance();
       } catch (error) {
@@ -214,20 +214,20 @@ export default function HomePage() {
         <label>Deposit : &nbsp;&nbsp;&nbsp;</label>
         <button onClick={deposit}> 1 ETH</button>
         <button onClick={deposit2}> 2 ETH</button>
-        <button onClick={deposit5}> 5 ETH</button>
-        <button onClick={deposit10}> 10 ETH</button><br/>
+        <button onClick={deposit3}> 3 ETH</button>
+        <button onClick={deposit5}> 5 ETH</button><br/>
         
         <label>Withdraw : </label>
         <button onClick={withdraw}> 1 ETH</button>
         <button onClick={withdraw2}> 2 ETH</button>
-        <button onClick={withdraw5}> 5 ETH</button>
-        <button onClick={withdraw10}> 10 ETH</button><br/><br/>
+        <button onClick={withdraw3}> 3 ETH</button>
+        <button onClick={withdraw5}> 5 ETH</button><br/><br/>
 
         <label>Multiply : </label>
         <button onClick={multiplyValue}> 2x</button>
         <button onClick={multiplyValue3}> 3x</button>
-        <button onClick={multiplyValue4}> 4x</button>
-        <button onClick={multiplyValue5}> 5x</button><br/><br/>
+        <button onClick={multiplyValue5}> 5x</button>
+        <button onClick={multiplyValue10}> 10x</button><br/><br/>
 
         <button
           onClick={() => {
@@ -254,8 +254,8 @@ export default function HomePage() {
         .container {
           text-align: center;
           background-color: black;
-          color: #00FFFF;
-          border-color: #00FFFF;
+          color: #00ff6e;
+          border-color: #00ff66;
           border-style: solid;
           border-width: 8px;
         }
