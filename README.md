@@ -1,64 +1,68 @@
-# Function-Frontend-Metacrafters
-This is a project with a smart contract that contains  4 functions and values of the functions is displayed in frontend app , made for Eth + Avax Intermediate Assesment 2 on the Metacrafters learning platform.
+# ETH+AVAX Assessment 2
 
-## Description
+## Overview
 
-This program is written in solidity, react.js and ether.js . The program has the following functions :-
+This is a project with a smart contract that works like an ATM that contains 4 functions and values of the functions is displayed in frontend app. Th functions are the following:
 
-(1) You can connect your Metamask wallet to the app and view its balance in the frontend
+1. Connect your MetaMask wallet and check its balance.
 
-(2) You can deposit and withdraw ETH in quantities of 1, 2, 5, 10.
+2. Deposit and withdraw ETH in quantities of 1, 2, 3, and 5.
 
-(3) You can multiply the ATM balance by 2x, 3x, 4x, 5x.
+3. Multiply your balance by 2x, 3x, 5x, and 10x.
 
-(4) You can Change the Owner of the contract
+4. Change the owner of the contract.
 
 ## Getting Started
 
+You can run the code locally, or you can use GitPod.
+
 ### Executing program
 
-(1) Cloning the github repository : 
+1. Clone the github repository: 
 
 ```bash
-git clone https://github.com/Spydiecy/Function-Frontend-Metacrafters.git
+git clone https://github.com/rolamj/ETHAVAXAssessment2.git
 ```
 
-(2) Install the required dependencies
+2. Install the required dependencies
 
 ```bash
-cd Function-Frontend-Metacrafters
 npm i
 ```
 
-(3) Open two extra terminals in your VS code, 
+3. Open two additional terminals 
  
-(4) In the second terminal type:
+4. In the second terminal, type:
+
 ```bash
-cd Function-Frontend-Metacrafters
 npx hardhat node
 ```
    
-(5) In the third terminal, type:
+5. In the third terminal, type:
+
 ```bash
-cd Function-Frontend-Metacrafters
 npx hardhat run --network localhost scripts/deploy.js.
 ```
   
 (6) Now, go back to the first terminal and type:
+
 ```bash
 npm run dev
 ```
 
-(7) Great you are done, now open the url below in your browser and enjoy interacting the program
+(7) Now, open the URL below in your browser and start interacting with the program
 
 ```bash
 http://localhost:3000
 ```
 
-## Authors
+## Author
 
-Tanishq
+- Michael John
+  - GitHub: [@rolamj](https://github.com/rolamj)
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+---
