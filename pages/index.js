@@ -89,6 +89,7 @@ export default function HomePage() {
       getBalance();
     }
   };
+
   const deposit5 = async () => {
     if (atm) {
       let tx = await atm.deposit(5);
@@ -171,17 +172,14 @@ export default function HomePage() {
     }
   };
 
-  const transferOwnership = async (newOwner) => {
-    if (atm && newOwner) {
+  const divideValue = async () => {
+    if (atm) {
       try {
-        let tx = await atm.transferOwnership(newOwner);
+        const tx = await atm.divideBalance(2); 
         await tx.wait();
-        alert(`Ownership transferred to ${newOwner}`);
+        getBalance();
       } catch (error) {
-        setOwnerError(true);
-        setTimeout(() => {
-          setOwnerError(false);
-        }, 5000);
+        console.error(error);
       }
     }
   };
@@ -196,7 +194,7 @@ export default function HomePage() {
     if (!account) {
       return (
         <button onClick={connectAccount}>
-          Please connect your Metamask wallet
+          Please connect your MetaMask wallet
         </button>
       );
     }
@@ -229,15 +227,8 @@ export default function HomePage() {
         <button onClick={multiplyValue5}> 5x</button>
         <button onClick={multiplyValue10}> 10x</button><br/><br/>
 
-        <button
-          onClick={() => {
-            const newOwner = prompt("Enter the new owner address:");
-            transferOwnership(newOwner);
-          }}
-        >
-          Change Owner
-        </button>
-        {ownerError && <p className="error">Error: Unable to change the Owner</p>}
+        <label>Divide : </label>
+        <button onClick={divideValue}> by 2</button>
       </div>
     );
   };
@@ -248,7 +239,7 @@ export default function HomePage() {
 
   return (
         <main className="container">
-      <header><h1>Welcome to the ATM!</h1></header>
+      <header><h1>ATM Machine</h1></header>
       {initUser()}
       <style jsx>{`
         .container {
