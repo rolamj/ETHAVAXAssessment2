@@ -44,13 +44,13 @@ npx hardhat node
 npx hardhat run --network localhost scripts/deploy.js
 ```
   
-(6) Now, go back to the first terminal and type:
+6. Now, go back to the first terminal and type:
 
 ```bash
 npm run dev
 ```
 
-(7) Now, open the URL below in your browser and start interacting with the program
+7. Now, open the URL below in your browser and start interacting with the program
 
 ```bash
 http://localhost:3000
