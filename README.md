@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a project with a smart contract that works like an ATM that contains 4 functions and values of the functions is displayed in frontend app. Th functions are the following:
+This is a project with a smart contract that works like an ATM that contains 4 functions and values of the functions is displayed in frontend app. The functions are the following:
 
 1. Connect your MetaMask wallet and check its balance.
 
