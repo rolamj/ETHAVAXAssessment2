@@ -41,7 +41,7 @@ npx hardhat node
 5. In the third terminal, type:
 
 ```bash
-npx hardhat run --network localhost scripts/deploy.js.
+npx hardhat run --network localhost scripts/deploy.js
 ```
   
 (6) Now, go back to the first terminal and type:
