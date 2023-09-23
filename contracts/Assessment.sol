@@ -10,7 +10,7 @@ contract Assessment {
     event Deposit(uint256 amount);
     event Withdraw(uint256 amount);
     event BalanceMultiplied(uint256 previousBalance, uint256 newBalance);
-    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+    event BalanceDivided(uint256 previousBalance, uint256 newBalance);
 
     constructor(uint initBalance) payable {
         owner = payable(msg.sender);
@@ -73,20 +73,19 @@ contract Assessment {
         emit BalanceMultiplied(_previousBalance, balance);
     }
 
-    function transferOwnership(address payable _newOwner) public {
+    function divideBalance(uint256 _divider) public {
         // make sure this is the owner
         require(msg.sender == owner, "You are not the owner of this account");
 
-        // validate the new owner address
-        require(_newOwner != address(0), "Invalid new owner address");
+        uint256 _previousBalance = balance;
 
-        // store the previous owner
-        address payable _previousOwner = owner;
+        // divide the balance
+        balance /= _divider;
 
-        // update the owner
-        owner = _newOwner;
+        // assert the balance is correct
+        assert(balance == _previousBalance / _divider);
 
         // emit the event
-        emit OwnershipTransferred(_previousOwner, _newOwner);
+        emit BalanceDivided(_previousBalance, balance);
     }
 }
