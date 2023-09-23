@@ -10,7 +10,7 @@ This is a project with a smart contract that works like an ATM that contains 4 f
 
 3. Multiply your balance by 2x, 3x, 5x, and 10x.
 
-4. Change the owner of the contract.
+4. Divide your balance by 2.
 
 ## Getting Started
 
